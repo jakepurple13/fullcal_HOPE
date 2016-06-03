@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+  <meta charset='utf-8' />
+  <link href='../fullcalendar.css' rel='stylesheet' />
+  <link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+  <script src='../lib/moment.min.js'></script>
+  <script src='../lib/jquery.min.js'></script>
+  <script src='../fullcalendar.js'></script>
+ <script>
+$(document).ready(function() {
+// vEvents is an array of objects
+var vEvents = [
+    { title: "new appointment", start: "07-APR-2015 14:00"  },
+    { title: "another meeting", start: "08-APR-2015 15:00" }
+];
+
+// Stringify it before storing
+localStorage.eventsList = JSON.stringify(vEvents);
+
+// Retrieve and parse the list when you want
+var events = JSON.parse(localStorage.eventsList);
+
+// You can now access the list as an array
+console.log(events[0]);
+
+// Now pass the events object to full calendar as needed
+});
+</script>
+<style>
+
+#body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    font-size: 14px;
+}
+
+#calendar {
+    width: 900px;
+    margin: 40px auto;
+    
+}
+//#ui-state-hover{
+//hover:{
+//	     color: #CA1D07;
+//          }
+//					}
+</style>
+</head>
+<body>
+<div id='calendar'>
+
+</div>
+
+</body>
+</html>

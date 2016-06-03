@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+    
+    
+    
     // page is now ready, initialize the calendar...
     var event = "";
 //$.getJSON('events.json', function(json) {
